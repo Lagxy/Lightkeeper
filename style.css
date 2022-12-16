@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1a1a1a;
+    overflow-x: hidden;
+    color: #e4e1cf;
+    z-index: -10;
+}
+
+@font-face {
+    font-family: "Patua One";
+    src: url("assets/Patua_One/PatuaOne-Regular.ttf") format('truetype');
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    font-size: 40px;
+    background-color: #252525;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 5px ridge silver;
+    width: 40%; /* Could be more or less, depending on screen size */
+    color: red;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.navbar {
+    /* background-color: #382902; */
+    background-color: #f29921;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-container img {
+    width: 150px;
+    margin-left: 70px;
+    transform: scale(1.1);
+}
+
+.nav-info {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.nav-info li {
+    list-style-type: none;
+    margin: 0 30px 0 30px;
+}
+
+.nav-info a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-info a:hover {
+    transition: .15s;
+    color: white;
+    filter: brightness(200%);
+}
+
+.header {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.header-info {
+    margin-left: 50px;
+}
+
+.header-info h1 {
+    font-size: 5.8rem;
+    font-family: "Patua One";
+    color: #f29921;
+}
+
+.underline {
+    display: block;
+    height: 6px;
+    width: 45%;
+    margin-top: -10px;
+    background-color: black;
+    border: 5px solid;
+    border-radius: 5px;
+}
+
+.header p {
+    font-size: 28px;
+}
+
+.h-line {
+    line-height: 300%;
+    font-weight: 600;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.header-logo img {
+    width: 350px;
+    border: 30px ridge #404040;
+    background-color: #f29921;
+    padding: 18px 0 0 4px;
+    margin-top: 20px;
+}
+
+.guild-info {
+    height: 1000px;
+    background-image: url("assets/Bridgewatch.jpeg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    transition: all .5s;
+}
+
+.sidebar1 {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    background-color: black;
+    opacity: 0;
+    padding: 0 0 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all .5s;
+}
+
+.sidebar1:hover {
+    opacity: .8;
+}
+
+.trans1 {
+    transform: translateX(-100%);
+}
+
+
+.sidebar1 h2, .sidebar2 h2 {
+    font-size: 3rem;
+    opacity: 1.5;
+    color: #f29921;
+}
+
+.sidebar1 p, .sidebar2 li {
+    font-size: 1.2rem;
+    line-height: 140%;
+    opacity: 1.5;
+}
+
+.sidebar2 {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    right: 0;
+    background-color: black;
+    opacity: 0;
+    padding: 0 0 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all .5s;
+}
+
+.sidebar2:hover {
+    opacity: .8;
+}
+
+.trans2 {
+    transform: translateX(100%);
+}
+
+.sidebar1:hover .trans1, .sidebar2:hover .trans2 {
+    transform: translateX(0);
+    transition: .5s .15s;
+}
+
+.requirement {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.req-container {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    border: 3px solid silver;
+    box-shadow: 7px 7px 2px silver;
+}
+
+.req-container ol li {
+    font-size: 1.2rem;
+}
+
+#contact {
+    height: 10vh;
+    background-color: #f29921;
+    display: flex;
+    align-items: center;
+}
+
+#contact img {
+    width: 50px;
+}
+
+.whatsapp {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.whatsapp a {
+    color: #252525;
+    margin-left: 5px;
+}
