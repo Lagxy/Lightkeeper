@@ -67,13 +67,13 @@ body {
 }
 
 .img-container img {
-    width: 150px;
+    width: 50px;
     margin-left: 70px;
-    transform: scale(1.1);
+    transform: scale(1.2); 
 }
 
 .nav-info {
-    font-size: 30px;
+    font-size: 1.4rem;
     display: flex;
     align-items: center;
     margin-right: 50px;
@@ -105,23 +105,22 @@ body {
 }
 
 .header-info h1 {
-    font-size: 5.8rem;
+    font-size: 3rem;
     font-family: "Patua One";
     color: #f29921;
 }
 
 .underline {
     display: block;
-    height: 6px;
-    width: 45%;
-    margin-top: -10px;
-    background-color: black;
-    border: 5px solid;
+    width: 100%;
+    margin-top: -12px;
+    background-color: #e4e1cf;
+    border: 3px solid;
     border-radius: 5px;
 }
 
 .header p {
-    font-size: 28px;
+    font-size: 1.4rem;
 }
 
 .h-line {
@@ -137,15 +136,15 @@ body {
 }
 
 .header-logo img {
-    width: 350px;
-    border: 30px ridge #404040;
+    width: 50%;
+    border: 10px groove #404040;
     background-color: #f29921;
     padding: 18px 0 0 4px;
     margin-top: 20px;
 }
 
 .guild-info {
-    height: 1000px;
+    height: 700px;
     background-image: url("assets/Bridgewatch.jpeg");
     background-repeat: no-repeat;
     background-position: bottom;
@@ -178,13 +177,13 @@ body {
 
 
 .sidebar1 h2, .sidebar2 h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     opacity: 1.5;
     color: #f29921;
 }
 
 .sidebar1 p, .sidebar2 li {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 140%;
     opacity: 1.5;
 }
@@ -225,16 +224,16 @@ body {
 
 .req-container {
     height: 70%;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
     border: 3px solid silver;
-    box-shadow: 7px 7px 2px silver;
+    box-shadow: 3px 3px 1px silver;
 }
 
 .req-container ol li {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 #contact {
