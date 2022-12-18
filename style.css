@@ -258,3 +258,36 @@ body {
     color: #252525;
     margin-left: 5px;
 }
+
+@media only screen and (max-width: 768px){
+    :root {
+        font-size: 14px;
+    }
+
+    .header-logo img {
+        width: 80%;
+        margin-top: 60%;
+    }
+
+    .sidebar1, .sidebar2 {
+        display: flex;
+        opacity: .7;
+        padding: 0 0 0 10px;
+    }
+
+    .trans1 {
+        margin-top: 6%;
+    }
+
+    .trans1, .trans2 {
+        transform: translateX(0);
+    }
+
+    .requirement {
+        height: 70vh;
+    }
+
+    #contact {
+        height: 6vh;
+    }
+}
