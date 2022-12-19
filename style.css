@@ -3,14 +3,30 @@
     scroll-behavior: smooth;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #1a1a1a;
-    overflow-x: hidden;
     color: #e4e1cf;
     z-index: -10;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 5vw, 5rem);
+}
+
+h2 {
+    font-size: clamp(.5rem, 1rem, 3rem);
+}
+
+p, li , a {
+    font-size: clamp(.5rem, 1.25vw, 1.5rem);
 }
 
 @font-face {
@@ -18,70 +34,35 @@ body {
     src: url("assets/Patua_One/PatuaOne-Regular.ttf") format('truetype');
 }
 
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: hidden; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-.modal-content {
-    font-size: 40px;
-    background-color: #252525;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 5px ridge silver;
-    width: 40%; /* Could be more or less, depending on screen size */
-    color: red;
-}
-
-.close:hover, .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
 .navbar {
     /* background-color: #382902; */
     background-color: #f29921;
-    width: 100vw;
+    max-width: 100vw;
     position: sticky;
     top: 0;
-    z-index: 9999;
+    z-index: 5;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .img-container img {
-    width: 50px;
-    margin-left: 70px;
-    transform: scale(1.2); 
+    width: min(20px,50px);
+    margin-left: min(10px, 60px);
+    transform: scale(max(1.4, 1.1)); 
 }
 
 .nav-info {
-    font-size: 1.4rem;
     display: flex;
     align-items: center;
-    margin-right: 50px;
+    margin-right: min(5px,30px);
 }
 
 .nav-info li {
+    display: block;
     list-style-type: none;
-    margin: 0 30px 0 30px;
+    margin-inline-start: min(2vw, 2rem);
+    margin-inline-end: min(2vw, 2rem);
 }
 
 .nav-info a {
@@ -101,11 +82,10 @@ body {
 }
 
 .header-info {
-    margin-left: 50px;
+    margin-left: min(.5rem, 3rem);
 }
 
 .header-info h1 {
-    font-size: 3rem;
     font-family: "Patua One";
     color: #f29921;
 }
@@ -115,12 +95,8 @@ body {
     width: 100%;
     margin-top: -12px;
     background-color: #e4e1cf;
-    border: 3px solid;
+    border: 2px solid;
     border-radius: 5px;
-}
-
-.header p {
-    font-size: 1.4rem;
 }
 
 .h-line {
@@ -133,18 +109,17 @@ body {
     align-items: center;
     justify-content: center;
     flex-grow: 1;
+    margin-top: min(10px,20px);
 }
 
 .header-logo img {
-    width: 50%;
-    border: 10px groove #404040;
+    width: max(40%, 50%);
+    border: clamp(2px, 5px, 10px) groove #404040;
     background-color: #f29921;
-    padding: 18px 0 0 4px;
-    margin-top: 20px;
 }
 
 .guild-info {
-    height: 700px;
+    height: clamp(50vh,80vh,85vh);
     background-image: url("assets/Bridgewatch.jpeg");
     background-repeat: no-repeat;
     background-position: bottom;
@@ -154,13 +129,13 @@ body {
     transition: all .5s;
 }
 
-.sidebar1 {
+.sidebar1, .sidebar2 {
     width: 50%;
-    height: 100%;
+    min-height: 100%;
     display: inline-block;
     background-color: black;
     opacity: 0;
-    padding: 0 0 0 30px;
+    padding-left: min(10px,35px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -175,31 +150,19 @@ body {
     transform: translateX(-100%);
 }
 
-
 .sidebar1 h2, .sidebar2 h2 {
-    font-size: 2rem;
     opacity: 1.5;
     color: #f29921;
 }
 
 .sidebar1 p, .sidebar2 li {
-    font-size: 1.4rem;
     line-height: 140%;
     opacity: 1.5;
 }
 
 .sidebar2 {
-    width: 50%;
-    height: 100%;
-    display: inline-block;
     right: 0;
-    background-color: black;
-    opacity: 0;
-    padding: 0 0 0 30px;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    transition: all .5s;
 }
 
 .sidebar2:hover {
@@ -210,13 +173,18 @@ body {
     transform: translateX(100%);
 }
 
+.trans2 h2 {
+    padding-left: 25px;
+}
+
 .sidebar1:hover .trans1, .sidebar2:hover .trans2 {
     transform: translateX(0);
     transition: .5s .15s;
 }
 
 .requirement {
-    height: 90vh;
+    height: min(40vh, 80vh);
+    max-width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -224,34 +192,33 @@ body {
 
 .req-container {
     height: 70%;
-    width: 400px;
+    width: min(60vw,80vw);
     display: flex;
-    flex-direction: column;
     align-items: center;
-    border: 3px solid silver;
-    box-shadow: 3px 3px 1px silver;
+    flex-direction: column;
+    border: 2px solid silver;
+    box-shadow: 2px 2px 1px silver;
 }
 
-.req-container ol li {
-    font-size: 1.4rem;
+.req-container ol {
+    padding: 0;
 }
 
 #contact {
-    height: 10vh;
+    height: min(5vh, 10vh);
     background-color: #f29921;
     display: flex;
     align-items: center;
 }
 
 #contact img {
-    width: 50px;
+    width: min(25px, 50px);
 }
 
 .whatsapp {
-    font-size: 1.3rem;
     display: flex;
     align-items: center;
-    padding-left: 5%;
+    padding-left: min(2%,5%);
 }
 
 .whatsapp a {
@@ -259,14 +226,54 @@ body {
     margin-left: 5px;
 }
 
-@media only screen and (max-width: 768px){
-    :root {
-        font-size: 14px;
+@media (max-width: 768px) {
+    .sidebar1, .sidebar2 {
+        opacity: .7;
     }
 
+    .trans1, .trans2 {
+        transform: translateX(0);
+    }
+
+    .guild-info {
+        height: min(30vh,50vh);
+    }
+}
+
+/* @media only screen and (max-width: 768px){
+    :root {
+        font-size: 8px;
+    }
+
+    
+    #myModal {
+        display: none;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .nav-info {
+        margin-right: 10px;
+    }
+
+    .nav-info li {
+        margin: 0 5px 0 5px;
+    }
+    
+    .img-container img {
+        width: 20px;
+        margin-left: 5px;
+    }
+    
     .header-logo img {
-        width: 80%;
+        width: 50%;
         margin-top: 60%;
+    }
+    
+    .header-info {
+        margin-left: 5px;
     }
 
     .sidebar1, .sidebar2 {
@@ -288,6 +295,10 @@ body {
     }
 
     #contact {
-        height: 6vh;
+        height: 7vh;
     }
-}
+
+    #contact img {
+        width: 35px;
+    }
+} */
